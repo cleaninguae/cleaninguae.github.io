@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional cleaning services across the UAE. Book sofa cleaning, villa cleaning, pest control, and more today!">
+  <meta name="keywords" content="cleaning services UAE, sofa cleaning, villa cleaning, pest control, eco-friendly cleaning">
+  <title>Professional Cleaning Services in UAE | Clean UAE</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Professional Cleaning Services in UAE | Clean UAE">
+  <meta property="og:description" content="Top-tier cleaning services for homes and businesses in the UAE.">
+  <meta property="og:image" content="https://cleaninguae.github.io/assets/images/hero-bg.jpg">
+  <meta property="og:url" content="https://cleaninguae.github.io">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Professional Cleaning Services in UAE | Clean UAE">
+  <meta name="twitter:description" content="Top-tier cleaning services for homes and businesses in the UAE.">
+  <meta name="twitter:image" content="https://cleaninguae.github.io/assets/images/hero-bg.jpg">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Clean UAE",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Clean Street",
+        "addressLocality": "Dubai",
+        "addressCountry": "AE"
+      },
+      "telephone": "+971559358440",
+      "email": "kalamansari1996@gmail.com",
+      "url": "https://cleaninguae.github.io"
+    }
+  </script>
+
+  <!-- Poppins Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Critical CSS (inlined for hero section) -->
+  <style>
+    body { margin: 0; font-family: 'Poppins', sans-serif; background: #fff; }
+    .navbar { position: sticky; top: 0; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 1rem; display: flex; justify-content: space-between; align-items: center; z-index: 1000; }
+    .hero { height: 100vh; background: url('carpet-cleaner-photo.webp') center/cover no-repeat; position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: #fff; }
+    .hero::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.2); }
+  </style>
+
+  <!-- Main CSS (compiled from SCSS) -->
+  <style>
+    /* Variables */
+    :root {
+      --aqua-blue: #753d22;
+      --dark-gray: #333;
+      --spacing-sm: 1rem;
+      --spacing-md: 2rem;
+      --spacing-lg: 4rem;
+    }
+
+    /* Navbar */
+    .navbar__logo { font-size: 1.5rem; font-weight: 700; }
+    .navbar__menu { display: flex; gap: 1.5rem; }
+    .navbar__menu a { text-decoration: none; color: var(--dark-gray); font-weight: 600; }
+    .navbar__cta { background: var(--aqua-blue); color: #fff; padding: 0.75rem 1.5rem; border-radius: 5px; text-decoration: none; }
+    .navbar__cta:hover { background: #a06030; }
+    .navbar__toggle { display: none; }
+    .navbar__cta2 { background: var(--aqua-blue); color: #fff; padding: 0.75rem 1.5rem; border-radius: 5px; text-decoration: none; }
+
+
+    /* Hero */
+    .hero__headline { font-size: 2.5rem; font-weight: 700; position: relative; z-index: 1; }
+    .hero__subheading { font-size: 1.2rem; margin: var(--spacing-sm) 0; position: relative; z-index: 1; }
+    .hero__cta { background: #fff; color: var(--aqua-blue); padding: 0.75rem 1.5rem; border: 2px solid var(--aqua-blue); border-radius: 5px; text-decoration: none; position: relative; z-index: 1; }
+    .hero__cta:hover { background: var(--aqua-blue); color: #fff; }
+
+    /* Why Us */
+    .why-us { padding: var(--spacing-lg); text-align: center; }
+    .why-us__heading { font-size: 2rem; margin-bottom: var(--spacing-md); }
+    .why-us__heading span { color: var(--aqua-blue); }
+    .why-us__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-md); }
+    .why-us__card { padding: var(--spacing-sm); box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-radius: 8px; }
+
+    /* Services */
+    .services { padding: var(--spacing-lg); text-align: center; }
+    .services__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-md); }
+    .services__card { padding: var(--spacing-sm); box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-radius: 8px; }
+    .services__card img { width: 50px; height: 50px; }
+
+    /* Custom Request */
+    .custom-request { padding: var(--spacing-lg); text-align: center; background: #f9f9f9; }
+    .custom-request form { display: flex; flex-direction: column; gap: var(--spacing-sm); max-width: 500px; margin: var(--spacing-md) auto; }
+    .custom-request textarea { padding: var(--spacing-sm); border: 1px solid #ddd; border-radius: 5px; }
+    .custom-request button { background: var(--aqua-blue); color: #fff; padding: 0.75rem; border: none; border-radius: 5px; cursor: pointer; }
+    .custom-request button:hover { background: #a16130; }
+
+    /* About us */
+    .about-us { padding: var(--spacing-lg); text-align: center; background: #ffffff;}
+    .about-us_bg { padding: var(--spacing-sm); box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-radius: 8px; }
+  
+
+    /* Testimonials */
+    .testimonials { padding: var(--spacing-lg); text-align: center; }
+    .testimonials__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-md); }
+    .testimonials__card { padding: var(--spacing-sm); box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-radius: 8px; }
+    .testimonials__card img { width: 50px; height: 50px; border-radius: 50%; }
+
+    /* FAQ */
+    .faq { padding: var(--spacing-lg); text-align: center; }
+    .faq__item { margin-bottom: var(--spacing-sm); }
+    .faq__question { background: #f9f9f9; padding: var(--spacing-sm); border-radius: 5px; cursor: pointer; text-align: left; }
+    .faq__answer { display: none; padding: var(--spacing-sm); text-align: left; }
+    .faq__answer.active { display: block; }
+
+    /* WhatsApp Widget */
+    .whatsapp { position: fixed; bottom: 20px; right: 20px; background: #30a03f; color: #fff; padding: 1rem; border-radius: 50px; box-shadow: 0 4px 6px rgba(0,0,0,0.2); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; }
+    .whatsapp:hover { background: #a16130; }
+
+    /* Footer */
+    .footer { padding: var(--spacing-lg); background: #f9f9f9; }
+    .footer__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-md); }
+    .footer__social a { color: var(--dark-gray); margin-right: 1rem; }
+    .footer__bottom { text-align: center; margin-top: var(--spacing-md); }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .navbar__menu { display: none; position: absolute; top: 100%; left: 0; right: 0; background: #fff; flex-direction: column; padding: var(--spacing-sm); box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+      .navbar__menu.active { display: flex; }
+      .navbar__toggle { display: block; font-size: 1.5rem; cursor: pointer; }
+      .hero__headline { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Sticky Navbar -->
+  <header class="navbar" role="navigation">
+    <div class="navbar__logo">
+      <img src="cleaning-company-uae-logo.png" alt="Cleaning Services UAE Logo" style="height: 40px;">
+    </div>
+    <nav class="navbar__menu">
+      <a href="#home">Home</a>
+      <a href="#why-us">Why Us</a>
+      <a href="#services">Services</a>
+      <a href="#about">About Us</a>
+      <a href="#contact">Contact Us</a>
+      <a href="#testimonials">Testimonials</a>
+    </nav>
+    <a href="https://wa.me/971559358440" class="navbar__cta2">  <i class="fab fa-whatsapp"></i> Online</a> 
+    <div class="navbar__toggle" aria-label="Toggle menu"><i class="fas fa-bars"></i></div>
+    
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <h1 class="hero__headline">Professional Cleaning Services in UAE</h1>
+    <p class="hero__subheading">Transforming spaces with expert care and eco-friendly solutions.</p>
+    <a href="#contact" class="hero__cta">Book Now</a>
+  </section>
+
+  <!-- Why Us Section -->
+  <section class="why-us" id="why-us">
+    <h2 class="why-us__heading">Why <span>Choose Us</span>?</h2>
+    <div class="why-us__grid">
+      <div class="why-us__card">
+        <i class="fas fa-clock fa-2x"></i>
+        <h3>Same-Day Service</h3>
+        <p>Need a clean space fast? Contact us today for same-day availability.</p>
+      </div>
+      <div class="why-us__card">
+        <i class="fas fa-tools fa-2x"></i>
+        <h3>Advanced Equipment</h3>
+        <p>We use high-tech tools for spotless results.</p>
+      </div>
+      <div class="why-us__card">
+        <i class="fas fa-leaf fa-2x"></i>
+        <h3>Eco-Friendly Materials</h3>
+        <p>Safe, planet-friendly cleaning solutions.</p>
+      </div>
+      <div class="why-us__card">
+        <i class="fas fa-user-check fa-2x"></i>
+        <h3>Expert Cleaners</h3>
+        <p>Trusted professionals ensuring top-quality care.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="services" id="services">
+    <h2>Our Services</h2>
+    <div class="services__grid">
+      <div class="services__card">
+        <i class="fas fa-couch fa-2x"></i>
+        <h3>Sofa Cleaning</h3>
+        <p>Deep cleaning for all types of sofas, removing stains and odors.</p>
+      </div>
+      <div class="services__card">
+        <i class="fas fa-carpet fa-2x"></i>
+        <h3>Carpet & Rug Cleaning</h3>
+        <p>Revitalize your carpets with our thorough cleaning process.</p>
+      </div>
+      <div class="services__card">
+        <i class="fas fa-bed fa-2x"></i>
+        <h3>Mattress Cleaning</h3>
+        <p>Ensure a hygienic sleep with expert mattress care.</p>
+      </div>
+      <div class="services__card">
+        <i class="fas fa-curtain fa-2x"></i>
+        <h3>Curtain Cleaning</h3>
+        <p>Freshen up your curtains without removing them.</p>
+      </div>
+      <div class="services__card">
+        <i class="fas fa-broom fa-2x"></i>
+        <h3>Maid Service</h3>
+        <p>Reliable and thorough cleaning by trained maids.</p>
+      </div>
+      <div class="services__card">
+        <i class="fas fa-gem fa-2x"></i>
+        <h3>Marble Polishing</h3>
+        <p>Restore the shine of your marble surfaces.</p>
+      </div>
+      <div class="services__card">
+        <i class="fas fa-home fa-2x"></i>
+        <h3>Villa Cleaning</h3>
+        <p>Comprehensive cleaning for large homes and villas.</p>
+      </div>
+      <div class="services__card">
+        <i class="fas fa-car fa-2x"></i>
+        <h3>Car Interior Cleaning</h3>
+        <p>Keep your car spotless inside and out.</p>
+      </div>
+      <div class="services__card">
+        <i class="fas fa-chair fa-2x"></i>
+        <h3>Majlis Cleaning</h3>
+        <p>Specialized cleaning for traditional seating areas.</p>
+      </div>
+      <div class="services__card">
+        <i class="fas fa-wind fa-2x"></i>
+        <h3>AC & Duct Cleaning</h3>
+        <p>Improve air quality with clean ducts and AC units.</p>
+      </div>
+      <div class="services__card">
+        <i class="fas fa-bug fa-2x"></i>
+        <h3>Pest Control</h3>
+        <p>Safe and effective pest removal for your property.</p>
+      </div>
+      <div class="services__card">
+        <i class="fas fa-tree fa-2x"></i>
+        <h3>Landscaping Service</h3>
+        <p>Maintain your outdoor spaces with expert care.</p>
+      </div>
+    </div>
+  </section>
+
+   <!-- Custom Request Section -->
+   <section class="custom-request" id="contact">
+    <h2>Custom Request</h2>
+    <p>Need a customized service not listed? Describe your requirements below and we’ll tailor a solution.</p>
+    <form action="https://formspree.io/f/your-form-id" method="POST" data-netlify="true" name="custom-request">
+      <textarea name="message" rows="5" placeholder="Describe your needs..." required aria-label="Custom request description"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+  
+  <!-- About us Section -->
+  <section class="about-us_bg" id="about">
+    <h2>About Us</h2> 
+    <p>Need a customized service not listed? Describe your requirements below and we’ll tailor a solution.</p>
+    </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials" id="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonials__grid">
+      <div class="testimonials__card">
+        <img src="assets/images/user1.jpg" alt="Customer photo" loading="lazy">
+        <p>"Amazing service! My house has never been cleaner."</p>
+        <h4>John Doe</h4>
+        <p>★★★★★</p>
+      </div>
+      <div class="testimonials__card">
+        <img src="assets/images/user2.jpg" alt="Customer photo" loading="lazy">
+        <p>"Quick and professional. Highly recommend!"</p>
+        <h4>Jane Smith</h4>
+        <p>★★★★☆</p>
+      </div>
+      <div class="testimonials__card">
+        <img src="assets/images/user3.jpg" alt="Customer photo" loading="lazy">
+        <p>"Eco-friendly and effective. Love it!"</p>
+        <h4>Ali Khan</h4>
+        <p>★★★★★</p>
+      </div>
+      <div class="testimonials__card">
+        <img src="assets/images/user4.jpg" alt="Customer photo" loading="lazy">
+        <p>"Same-day service saved us!"</p>
+        <h4>Sara Ahmed</h4>
+        <p>★★★★☆</p>
+      </div>
+      <div class="testimonials__card">
+        <img src="assets/images/user5.jpg" alt="Customer photo" loading="lazy">
+        <p>"Best cleaners in UAE hands down."</p>
+        <h4>Mohammed Ali</h4>
+        <p>★★★★★</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion -->
+  <section class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq__item">
+      <div class="faq__question" tabindex="0" role="button" aria-expanded="false">How do I book a service?</div>
+      <div class="faq__answer">Simply contact us via the form or WhatsApp, and we’ll schedule it for you!</div>
+    </div>
+    <div class="faq__item">
+      <div class="faq__question" tabindex="0" role="button" aria-expanded="false">What areas do you cover?</div>
+      <div class="faq__answer">We serve all major cities in the UAE, including Dubai, Abu Dhabi, and Sharjah.</div>
+    </div>
+    <div class="faq__item">
+      <div class="faq__question" tabindex="0" role="button" aria-expanded="false">Are your materials safe?</div>
+      <div class="faq__answer">Yes, we use eco-friendly, non-toxic cleaning solutions.</div>
+    </div>
+    <div class="faq__item">
+      <div class="faq__question" tabindex="0" role="button" aria-expanded="false">Can I get same-day service?</div>
+      <div class="faq__answer">Yes, subject to availability. Contact us to confirm.</div>
+    </div>
+    <div class="faq__item">
+      <div class="faq__question" tabindex="0" role="button" aria-expanded="false">What’s your cancellation policy?</div>
+      <div class="faq__answer">Cancel up to 24 hours before your appointment at no charge.</div>
+    </div>
+  </section>
+
+  <!-- WhatsApp Widget -->
+  <a href="https://wa.me/971559358440" class="whatsapp" target="_blank" aria-label="Chat with us on WhatsApp">
+    <i class="fab fa-whatsapp"></i> Get Free Quotation
+    </a>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__grid">
+      <div>
+        <div class="navbar__logo">Clean UAE</div>
+        <p>Professional cleaning services across the UAE.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Our Branches</h4>
+        <a href="https://cleaninguae.github.io/dubai/">Dubai</a><br>
+        <a href="https://cleaninguae.github.io/abu-dhabi/">Abu Dhabi</a><br>
+        <a href="https://cleaninguae.github.io/sharjah/">Sharjah</a><br>
+        <a href="https://cleaninguae.github.io/ajman/">Ajman</a><br>
+        <a href="https://cleaninguae.github.io/umm-al-quwain/">Umm Al Quwain</a><br>
+        <a href="https://cleaninguae.github.io/ras-al-khaimah/">Ras Al Khaimah</a><br>
+        <a href="https://cleaninguae.github.io/fujairah/">Fujairah</a><br>
+      </div>
+      <div>
+        <h4>Useful Links</h4>
+        <a href="#home">Home</a><br>
+        <a href="#about">About Us</a><br>
+        <a href="#faq">FAQ</a><br>
+        <a href="#privacy">Privacy Policy</a>
+      </div>
+      <div>
+        <h4>Contact Us</h4>
+        <p>123 Clean Street, Dubai, UAE</p>
+        <p>+971559358440</p>
+        <p>kalamansari1996@gmail.com</p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      © <span id="year"></span> Cleaning Company Services UAE — Developed by <a href="https://hirekalam.github.io/">Hire Kalam</a>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Dynamic Year in Footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Typewriter Animation for Hero Headline
+    const headlines = [
+      "Professional Cleaning Services in UAE",
+      "Spotless Spaces, Happy Faces",
+      "Eco-Friendly Cleaning Solutions"
+    ];
+    let currentIndex = 0;
+    let charIndex = 0;
+    const headlineElement = document.querySelector('.hero__headline');
+    function type() {
+      if (charIndex < headlines[currentIndex].length) {
+        headlineElement.textContent = headlines[currentIndex].slice(0, ++charIndex);
+        setTimeout(type, 100);
+      } else {
+        setTimeout(erase, 2000);
+      }
+    }
+    function erase() {
+      if (charIndex > 0) {
+        headlineElement.textContent = headlines[currentIndex].slice(0, --charIndex);
+        setTimeout(erase, 50);
+      } else {
+        currentIndex = (currentIndex + 1) % headlines.length;
+        setTimeout(type, 500);
+      }
+    }
+    type();
+
+    // FAQ Accordion
+    document.querySelectorAll('.faq__question').forEach(item => {
+      item.addEventListener('click', () => {
+        const answer = item.nextElementSibling;
+        answer.classList.toggle('active');
+        item.setAttribute('aria-expanded', answer.classList.contains('active'));
+      });
+    });
+
+    // Mobile Menu Toggle
+    const toggle = document.querySelector('.navbar__toggle');
+    const menu = document.querySelector('.navbar__menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
