@@ -10,14 +10,14 @@
   <!-- Open Graph -->
   <meta property="og:title" content="Professional Cleaning Services in UAE | Clean UAE">
   <meta property="og:description" content="Top-tier cleaning services for homes and businesses in the UAE.">
-  <meta property="og:image" content="https://yourdomain.com/assets/images/hero-bg.jpg">
-  <meta property="og:url" content="https://yourdomain.com">
+  <meta property="og:image" content="https://cleaninguae.github.io/assets/images/hero-bg.jpg">
+  <meta property="og:url" content="https://cleaninguae.github.io">
 
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Professional Cleaning Services in UAE | Clean UAE">
   <meta name="twitter:description" content="Top-tier cleaning services for homes and businesses in the UAE.">
-  <meta name="twitter:image" content="https://yourdomain.com/assets/images/hero-bg.jpg">
+  <meta name="twitter:image" content="https://cleaninguae.github.io/assets/images/hero-bg.jpg">
 
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
@@ -33,7 +33,7 @@
       },
       "telephone": "+971559358440",
       "email": "kalamansari1996@gmail.com",
-      "url": "https://yourdomain.com"
+      "url": "https://cleaninguae.github.io"
     }
   </script>
 
@@ -69,6 +69,8 @@
     .navbar__cta { background: var(--aqua-blue); color: #fff; padding: 0.75rem 1.5rem; border-radius: 5px; text-decoration: none; }
     .navbar__cta:hover { background: #a06030; }
     .navbar__toggle { display: none; }
+    .navbar__cta2 { background: var(--aqua-blue); color: #fff; padding: 0.75rem 1.5rem; border-radius: 5px; text-decoration: none; }
+
 
     /* Hero */
     .hero__headline { font-size: 2.5rem; font-weight: 700; position: relative; z-index: 1; }
@@ -94,7 +96,12 @@
     .custom-request form { display: flex; flex-direction: column; gap: var(--spacing-sm); max-width: 500px; margin: var(--spacing-md) auto; }
     .custom-request textarea { padding: var(--spacing-sm); border: 1px solid #ddd; border-radius: 5px; }
     .custom-request button { background: var(--aqua-blue); color: #fff; padding: 0.75rem; border: none; border-radius: 5px; cursor: pointer; }
-    .custom-request button:hover { background: #a06030; }
+    .custom-request button:hover { background: #a16130; }
+
+    /* About us */
+    .about-us { padding: var(--spacing-lg); text-align: center; background: #ffffff;}
+    .about-us_bg { padding: var(--spacing-sm); box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-radius: 8px; }
+  
 
     /* Testimonials */
     .testimonials { padding: var(--spacing-lg); text-align: center; }
@@ -110,8 +117,8 @@
     .faq__answer.active { display: block; }
 
     /* WhatsApp Widget */
-    .whatsapp { position: fixed; bottom: 20px; right: 20px; background: var(--aqua-blue); color: #fff; padding: 1rem; border-radius: 50px; box-shadow: 0 4px 6px rgba(0,0,0,0.2); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; }
-    .whatsapp:hover { background: #a06030; }
+    .whatsapp { position: fixed; bottom: 20px; right: 20px; background: #30a03f; color: #fff; padding: 1rem; border-radius: 50px; box-shadow: 0 4px 6px rgba(0,0,0,0.2); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; }
+    .whatsapp:hover { background: #a16130; }
 
     /* Footer */
     .footer { padding: var(--spacing-lg); background: #f9f9f9; }
@@ -136,13 +143,15 @@
     </div>
     <nav class="navbar__menu">
       <a href="#home">Home</a>
-      <a href="#services">Services</a>
       <a href="#why-us">Why Us</a>
+      <a href="#services">Services</a>
       <a href="#about">About Us</a>
       <a href="#contact">Contact Us</a>
+      <a href="#testimonials">Testimonials</a>
     </nav>
-    <a href="#contact" class="navbar__cta">Get Free Quotation</a>
+    <a href="https://wa.me/971559358440" class="navbar__cta2">  <i class="fab fa-whatsapp"></i> Online</a> 
     <div class="navbar__toggle" aria-label="Toggle menu"><i class="fas fa-bars"></i></div>
+    
   </header>
 
   <!-- Hero Section -->
@@ -246,8 +255,8 @@
     </div>
   </section>
 
-  <!-- Custom Request Section -->
-  <section class="custom-request" id="contact">
+   <!-- Custom Request Section -->
+   <section class="custom-request" id="contact">
     <h2>Custom Request</h2>
     <p>Need a customized service not listed? Describe your requirements below and we’ll tailor a solution.</p>
     <form action="https://formspree.io/f/your-form-id" method="POST" data-netlify="true" name="custom-request">
@@ -255,9 +264,15 @@
       <button type="submit">Submit</button>
     </form>
   </section>
+  
+  <!-- About us Section -->
+  <section class="about-us_bg" id="about">
+    <h2>About Us</h2> 
+    <p>Need a customized service not listed? Describe your requirements below and we’ll tailor a solution.</p>
+    </section>
 
   <!-- Testimonials -->
-  <section class="testimonials">
+  <section class="testimonials" id="testimonials">
     <h2>What Our Clients Say</h2>
     <div class="testimonials__grid">
       <div class="testimonials__card">
@@ -320,8 +335,8 @@
 
   <!-- WhatsApp Widget -->
   <a href="https://wa.me/971559358440" class="whatsapp" target="_blank" aria-label="Chat with us on WhatsApp">
-    <i class="fab fa-whatsapp"></i> Online
-  </a>
+    <i class="fab fa-whatsapp"></i> Get Free Quotation
+    </a>
 
   <!-- Footer -->
   <footer class="footer">
@@ -336,10 +351,14 @@
         </div>
       </div>
       <div>
-        <h4>Quick Links</h4>
-        <a href="#sofa">Sofa Cleaning</a><br>
-        <a href="#villa">Villa Cleaning</a><br>
-        <a href="#pest">Pest Control</a>
+        <h4>Our Branches</h4>
+        <a href="https://cleaninguae.github.io/dubai/">Dubai</a><br>
+        <a href="https://cleaninguae.github.io/abu-dhabi/">Abu Dhabi</a><br>
+        <a href="https://cleaninguae.github.io/sharjah/">Sharjah</a><br>
+        <a href="https://cleaninguae.github.io/ajman/">Ajman</a><br>
+        <a href="https://cleaninguae.github.io/umm-al-quwain/">Umm Al Quwain</a><br>
+        <a href="https://cleaninguae.github.io/ras-al-khaimah/">Ras Al Khaimah</a><br>
+        <a href="https://cleaninguae.github.io/fujairah/">Fujairah</a><br>
       </div>
       <div>
         <h4>Useful Links</h4>
