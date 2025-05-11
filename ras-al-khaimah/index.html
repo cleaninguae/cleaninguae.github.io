@@ -17,8 +17,8 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="Professional Cleaning Services in Dubai | Clean Dubai">
-  <meta property="og:description" content="Top-tier cleaning services for homes and businesses in Dubai.">
-  <meta property="og:image" content="https://cleaninguae.github.io/assets/images/dubai-hero-bg.jpg">
+  <meta property="og:description" content="Top-tier cleaning services for homes and businesses in Dubai. Book sofa cleaning, villa cleaning, pest control, and more!">
+  <meta property="og:image" content="dubai-cleaning-hero.webp">
   <meta property="og:url" content="https://cleaninguae.github.io/dubai/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_AE">
@@ -26,8 +26,8 @@
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Professional Cleaning Services in Dubai | Clean Dubai">
-  <meta name="twitter:description" content="Top-tier cleaning services for homes and businesses in Dubai.">
-  <meta name="twitter:image" content="https://cleaninguae.github.io/assets/images/dubai-hero-bg.jpg">
+  <meta name="twitter:description" content="Top-tier cleaning services for homes and businesses in Dubai. Book sofa cleaning, villa cleaning, pest control, and more!">
+  <meta name="twitter:image" content="dubai-cleaning-hero.webp">
 
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
@@ -51,13 +51,19 @@
       "telephone": "+971559358440",
       "email": "kalamansari1996@gmail.com",
       "url": "https://cleaninguae.github.io/dubai/",
+      "image": "dubai-cleaning-hero.webp",
       "openingHours": "Mo-Su 08:00-20:00",
       "sameAs": [
         "https://www.facebook.com/cleandubai",
         "https://www.instagram.com/cleandubai",
         "https://www.linkedin.com/company/cleandubai"
       ],
-      "priceRange": "$$"
+      "priceRange": "$$",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "1600"
+      }
     }
   </script>
 
@@ -71,12 +77,6 @@
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://cleaninguae.github.io/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Dubai Cleaning Services",
           "item": "https://cleaninguae.github.io/dubai/"
         }
       ]
@@ -93,7 +93,7 @@
   <style>
     body { margin: 0; font-family: 'Poppins', sans-serif; background: #fff; }
     .navbar { position: sticky; top: 0; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 1rem; display: flex; justify-content: space-between; align-items: center; z-index: 1000; }
-    .hero { height: 100vh; background: url('dubai/dubai-cleaning-hero.webp') center/cover no-repeat; position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: #fff; }
+    .hero { height: 100vh; background: url('dubai-cleaning-hero.webp') center/cover no-repeat; position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: #fff; }
     .hero::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.2); }
   </style>
 
@@ -107,17 +107,28 @@
       --spacing-lg: 4rem;
     }
 
+    /* Global Link Styling */
+    a {
+      color: var(--aqua-blue);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #a06030;
+    }
+
     .navbar__logo { font-size: 1.5rem; font-weight: 700; }
     .navbar__menu { display: flex; gap: 1.5rem; }
-    .navbar__menu a { text-decoration: none; color: var(--dark-gray); font-weight: 600; }
-    .navbar__cta { background: var(--aqua-blue); color: #fff; padding: 0.75rem 1.5rem; border-radius: 5px; text-decoration: none; }
+    .navbar__menu a { font-weight: 600; }
+    .navbar__cta { background: var(--aqua-blue); color: #fff; padding: 0.75rem 1.5rem; border-radius: 5px; }
     .navbar__cta:hover { background: #a06030; }
     .navbar__toggle { display: none; }
-    .navbar__cta2 { background: var(--aqua-blue); color: #fff; padding: 0.75rem 1.5rem; border-radius: 5px; text-decoration: none; }
+    .navbar__cta2 { background: var(--aqua-blue); color: #fff; padding: 0.75rem 1.5rem; border-radius: 5px; }
+    .navbar__cta2:hover { background: #a06030; color: #fff; }
 
     .hero__headline { font-size: 2.5rem; font-weight: 700; position: relative; z-index: 1; }
     .hero__subheading { font-size: 1.2rem; margin: var(--spacing-sm) 0; position: relative; z-index: 1; }
-    .hero__cta { background: #fff; color: var(--aqua-blue); padding: 0.75rem 1.5rem; border: 2px solid var(--aqua-blue); border-radius: 5px; text-decoration: none; position: relative; z-index: 1; }
+    .hero__cta { background: #fff; color: var(--aqua-blue); padding: 0.75rem 1.5rem; border: 2px solid var(--aqua-blue); border-radius: 5px; position: relative; z-index: 1; }
     .hero__cta:hover { background: var(--aqua-blue); color: #fff; }
 
     .why-us { padding: var(--spacing-lg); text-align: center; }
@@ -125,19 +136,20 @@
     .why-us__heading span { color: var(--aqua-blue); }
     .why-us__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-md); }
     .why-us__card { padding: var(--spacing-sm); box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-radius: 8px; }
+    .why-us__card i { color: var(--aqua-blue); margin-bottom: 0.5rem; }
 
     .services { padding: var(--spacing-lg); text-align: center; }
     .services__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-md); }
     .services__card { padding: var(--spacing-sm); box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-radius: 8px; }
-    .services__card img { width: 50px; height: 50px; }
+    .services__card i { font-size: 2rem; color: var(--aqua-blue); margin-bottom: 0.5rem; }
 
     .custom-request { padding: var(--spacing-lg); text-align: center; background: #f9f9f9; }
     .custom-request form { display: flex; flex-direction: column; gap: var(--spacing-sm); max-width: 500px; margin: var(--spacing-md) auto; }
     .custom-request textarea { padding: var(--spacing-sm); border: 1px solid #ddd; border-radius: 5px; }
     .custom-request button { background: var(--aqua-blue); color: #fff; padding: 0.75rem; border: none; border-radius: 5px; cursor: pointer; }
-    .custom-request button:hover { background: #a16130; }
+    .custom-request button:hover { background: #a06030; color: #fff; }
 
-    .about-us { padding: var(--spacing-lg); text-align: center; background: #ffffff;}
+    .about-us { padding: var(--spacing-lg); text-align: center; background: #fff; }
     .about-us_bg { padding: var(--spacing-sm); box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-radius: 8px; }
 
     .testimonials { padding: var(--spacing-lg); text-align: center; }
@@ -151,12 +163,12 @@
     .faq__answer { display: none; padding: var(--spacing-sm); text-align: left; }
     .faq__answer.active { display: block; }
 
-    .whatsapp { position: fixed; bottom: 20px; right: 20px; background: #30a03f; color: #fff; padding: 1rem; border-radius: 50px; box-shadow: 0 4px 6px rgba(0,0,0,0.2); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; }
-    .whatsapp:hover { background: #a16130; }
+    .whatsapp { position: fixed; bottom: 20px; right: 20px; background: #30a03f; color: #fff; padding: 1rem; border-radius: 50px; box-shadow: 0 4px 6px rgba(0,0,0,0.2); display: flex; align-items: center; gap: 0.5rem; }
+    .whatsapp:hover { background: #a06030; color: #fff; }
 
     .footer { padding: var(--spacing-lg); background: #f9f9f9; }
     .footer__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-md); }
-    .footer__social a { color: var(--dark-gray); margin-right: 1rem; }
+    .footer__social a { margin-right: 1rem; }
     .footer__bottom { text-align: center; margin-top: var(--spacing-md); }
 
     @media (max-width: 768px) {
@@ -164,6 +176,7 @@
       .navbar__menu.active { display: flex; }
       .navbar__toggle { display: block; font-size: 1.5rem; cursor: pointer; }
       .hero__headline { font-size: 1.8rem; }
+      .hero { height: 80vh; }
     }
   </style>
 </head>
@@ -171,15 +184,16 @@
   <!-- Sticky Navbar -->
   <header class="navbar" role="navigation">
     <div class="navbar__logo">
-      <img src="cleaning-company-dubai-logo.png" alt="Cleaning Services Dubai Logo" style="height: 40px;">
+      <img src="https://cleaninguae.github.io/assets/images/cleaning-company-dubai-logo.png" alt="Cleaning Services Dubai Logo" style="height: 40px;" loading="lazy">
     </div>
     <nav class="navbar__menu">
-      <a href="#home">Home</a>
-      <a href="#why-us">Why Us</a>
-      <a href="#services">Services</a>
-      <a href="#about">About Us</a>
-      <a href="#contact">Contact Us</a>
-      <a href="#testimonials">Testimonials</a>
+      <a href="/dubai/#home">Home</a>
+      <a href="/dubai/why-us/">Why Us</a>
+      <a href="/dubai/services/">Services</a>
+      <a href="/dubai/about-us/">About Us</a>
+      <a href="/dubai/contact-us/">Contact Us</a>
+      <a href="/dubai/testimonials/">Testimonials</a>
+      <a href="/dubai/blog/">Blog</a>
     </nav>
     <a href="https://wa.me/971559358440" class="navbar__cta2"><i class="fab fa-whatsapp"></i> Online</a>
     <div class="navbar__toggle" aria-label="Toggle menu"><i class="fas fa-bars"></i></div>
@@ -189,7 +203,7 @@
   <section class="hero" id="home">
     <h1 class="hero__headline">Premier Cleaning Services in Dubai</h1>
     <p class="hero__subheading">Transforming Dubai homes and businesses with expert care.</p>
-    <a href="#contact" class="hero__cta">Book Now</a>
+    <a href="/dubai/contact-us/#contact-forms" class="hero__cta">Book Now</a>
   </section>
 
   <!-- Why Us Section -->
@@ -221,66 +235,66 @@
 
   <!-- Services Grid -->
   <section class="services" id="services">
-    <h2>Our Dubai Cleaning Services</h2>
+    <h2>Our <a href="/dubai/services/">Dubai Cleaning Services</a></h2>
     <div class="services__grid">
-      <div class="services__card">
+      <div class="services__card" id="sofa-cleaning">
         <i class="fas fa-couch fa-2x"></i>
-        <h3>Sofa Cleaning Dubai</h3>
+        <h3><a href="/dubai/services/#sofa-cleaning">Sofa Cleaning Dubai</a></h3>
         <p>Deep cleaning for sofas, removing stains and odors in Dubai homes.</p>
       </div>
-      <div class="services__card">
+      <div class="services__card" id="carpet-cleaning">
         <i class="fas fa-carpet fa-2x"></i>
-        <h3>Carpet & Rug Cleaning</h3>
+        <h3><a href="/dubai/services/#carpet-cleaning">Carpet & Rug Cleaning</a></h3>
         <p>Revitalize carpets with expert cleaning in Dubai.</p>
       </div>
-      <div class="services__card">
+      <div class="services__card" id="mattress-cleaning">
         <i class="fas fa-bed fa-2x"></i>
-        <h3>Mattress Cleaning</h3>
+        <h3><a href="/dubai/services/#mattress-cleaning">Mattress Cleaning</a></h3>
         <p>Hygienic mattress care for Dubai residents.</p>
       </div>
-      <div class="services__card">
+      <div class="services__card" id="curtain-cleaning">
         <i class="fas fa-curtain fa-2x"></i>
-        <h3>Curtain Cleaning</h3>
+        <h3><a href="/dubai/services/#curtain-cleaning">Curtain Cleaning</a></h3>
         <p>Refresh curtains without removal in Dubai properties.</p>
       </div>
-      <div class="services__card">
+      <div class="services__card" id="maid-service">
         <i class="fas fa-broom fa-2x"></i>
-        <h3>Maid Service</h3>
+        <h3><a href="/dubai/services/#maid-service">Maid Service</a></h3>
         <p>Trusted maid services for Dubai homes and offices.</p>
       </div>
-      <div class="services__card">
+      <div class="services__card" id="marble-polishing">
         <i class="fas fa-gem fa-2x"></i>
-        <h3>Marble Polishing</h3>
+        <h3><a href="/dubai/services/#marble-polishing">Marble Polishing</a></h3>
         <p>Restore marble shine in Dubai’s luxury spaces.</p>
       </div>
-      <div class="services__card">
+      <div class="services__card" id="villa-cleaning">
         <i class="fas fa-home fa-2x"></i>
-        <h3>Villa Cleaning Dubai</h3>
+        <h3><a href="/dubai/services/#villa-cleaning">Villa Cleaning Dubai</a></h3>
         <p>Comprehensive cleaning for Dubai’s villas and large homes.</p>
       </div>
-      <div class="services__card">
+      <div class="services__card" id="car-interior-cleaning">
         <i class="fas fa-car fa-2x"></i>
-        <h3>Car Interior Cleaning</h3>
+        <h3><a href="/dubai/services/#car-interior-cleaning">Car Interior Cleaning</a></h3>
         <p>Spotless car interiors for Dubai drivers.</p>
       </div>
-      <div class="services__card">
+      <div class="services__card" id="majlis-cleaning">
         <i class="fas fa-chair fa-2x"></i>
-        <h3>Majlis Cleaning</h3>
+        <h3><a href="/dubai/services/#majlis-cleaning">Majlis Cleaning</a></h3>
         <p>Specialized cleaning for Dubai’s traditional seating areas.</p>
       </div>
-      <div class="services__card">
+      <div class="services__card" id="ac-duct-cleaning">
         <i class="fas fa-wind fa-2x"></i>
-        <h3>AC & Duct Cleaning</h3>
+        <h3><a href="/dubai/services/#ac-duct-cleaning">AC & Duct Cleaning</a></h3>
         <p>Improve air quality in Dubai with clean AC units.</p>
       </div>
-      <div class="services__card">
+      <div class="services__card" id="pest-control">
         <i class="fas fa-bug fa-2x"></i>
-        <h3>Pest Control Dubai</h3>
+        <h3><a href="/dubai/services/#pest-control">Pest Control Dubai</a></h3>
         <p>Safe pest removal for Dubai properties.</p>
       </div>
-      <div class="services__card">
+      <div class="services__card" id="landscaping">
         <i class="fas fa-tree fa-2x"></i>
-        <h3>Landscaping Service</h3>
+        <h3><a href="/dubai/services/#landscaping">Landscaping Service</a></h3>
         <p>Expert outdoor care for Dubai’s gardens.</p>
       </div>
     </div>
@@ -290,16 +304,21 @@
   <section class="custom-request" id="contact">
     <h2>Custom Cleaning Request in Dubai</h2>
     <p>Need a tailored cleaning service in Dubai? Let us know your requirements.</p>
-    <form action="https://formspree.io/f/your-form-id" method="POST" data-netlify="true" name="custom-request">
+    <form action="https://formspree.io/f/meogaakj" method="POST" data-netlify="true" name="custom-request">
+      <input type="hidden" name="_subject" value="New Custom Cleaning Request">
+      <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name">
+      <input type="tel" name="phone" placeholder="UAE Contact Number" required aria-label="UAE Contact Number" pattern="^(\+971|0)?[5][0-9]{8}$">
       <textarea name="message" rows="5" placeholder="Describe your cleaning needs in Dubai..." required aria-label="Custom request description"></textarea>
       <button type="submit">Submit</button>
     </form>
   </section>
 
   <!-- About Us Section -->
-  <section class="about-us_bg" id="about">
-    <h2>About Clean Dubai</h2>
-    <p>We are Dubai’s leading cleaning service provider, offering eco-friendly and professional solutions for homes and businesses.</p>
+  <section class="about-us" id="about">
+    <div class="about-us_bg">
+      <h2>About <a href="/dubai/about-us/">Clean Dubai</a></h2>
+      <p>We are Dubai’s leading cleaning service provider, offering eco-friendly and professional solutions for homes and businesses.</p>
+    </div>
   </section>
 
   <!-- Testimonials -->
@@ -307,44 +326,45 @@
     <h2>What Dubai Clients Say</h2>
     <div class="testimonials__grid">
       <div class="testimonials__card">
-        <img src="assets/images/user1.jpg" alt="Dubai customer photo" loading="lazy">
+        <img src="https://cleaninguae.github.io/assets/images/user1.jpg" alt="Dubai customer photo" loading="lazy">
         <p>"Best cleaning service in Dubai! My villa sparkles."</p>
         <h4>Ahmed Al Maktoum</h4>
         <p>★★★★★</p>
       </div>
       <div class="testimonials__card">
-        <img src="assets/images/user2.jpg" alt="Dubai customer photo" loading="lazy">
+        <img src="https://cleaninguae.github.io/assets/images/user2.jpg" alt="Dubai customer photo" loading="lazy">
         <p>"Fast and professional service in Dubai."</p>
         <h4>Fatima Khan</h4>
         <p>★★★★☆</p>
       </div>
       <div class="testimonials__card">
-        <img src="assets/images/user3.jpg" alt="Dubai customer photo" loading="lazy">
+        <img src="https://cleaninguae.github.io/assets/images/user3.jpg" alt="Dubai customer photo" loading="lazy">
         <p>"Eco-friendly cleaning that’s perfect for Dubai."</p>
         <h4>John Matthews</h4>
         <p>★★★★★</p>
       </div>
       <div class="testimonials__card">
-        <img src="assets/images/user4.jpg" alt="Dubai customer photo" loading="lazy">
+        <img src="https://cleaninguae.github.io/assets/images/user4.jpg" alt="Dubai customer photo" loading="lazy">
         <p>"Same-day service in Dubai saved the day!"</p>
         <h4>Layla Hassan</h4>
         <p>★★★★☆</p>
       </div>
       <div class="testimonials__card">
-        <img src="assets/images/user5.jpg" alt="Dubai customer photo" loading="lazy">
+        <img src="https://cleaninguae.github.io/assets/images/user5.jpg" alt="Dubai customer photo" loading="lazy">
         <p>"Top cleaners for my Dubai office."</p>
         <h4>Mohammed Saeed</h4>
         <p>★★★★★</p>
       </div>
     </div>
+    <a href="/dubai/testimonials/" class="hero__cta" style="margin-top: var(--spacing-md); display: inline-block;">View More Testimonials</a>
   </section>
 
   <!-- FAQ Accordion -->
-  <section class="faq">
+  <section class="faq" id="faq">
     <h2>Dubai Cleaning FAQs</h2>
     <div class="faq__item">
       <div class="faq__question" tabindex="0" role="button" aria-expanded="false">How do I book a cleaning service in Dubai?</div>
-      <div class="faq__answer">Contact us via WhatsApp or the form for quick booking in Dubai.</div>
+      <div class="faq__answer">Contact us via <a href="https://wa.me/971559358440">WhatsApp</a> or our <a href="/dubai/contact-us/#contact-forms">booking form</a> for quick booking in Dubai.</div>
     </div>
     <div class="faq__item">
       <div class="faq__question" tabindex="0" role="button" aria-expanded="false">Which Dubai areas do you cover?</div>
@@ -383,23 +403,23 @@
       </div>
       <div>
         <h4>Our Services</h4>
-        <a href="#services">Sofa Cleaning</a><br>
-        <a href="#services">Villa Cleaning</a><br>
-        <a href="#services">Pest Control</a><br>
-        <a href="#services">AC & Duct Cleaning</a>
+        <a href="/dubai/services/#sofa-cleaning">Sofa Cleaning</a><br>
+        <a href="/dubai/services/#villa-cleaning">Villa Cleaning</a><br>
+        <a href="/dubai/services/#pest-control">Pest Control</a><br>
+        <a href="/dubai/services/#ac-duct-cleaning">AC & Duct Cleaning</a>
       </div>
       <div>
         <h4>Useful Links</h4>
-        <a href="#home">Home</a><br>
-        <a href="#about">About Us</a><br>
-        <a href="#faq">FAQ</a><br>
-        <a href="#privacy">Privacy Policy</a>
+        <a href="/dubai/#home">Home</a><br>
+        <a href="/dubai/about-us/">About Us</a><br>
+        <a href="/dubai/#faq">FAQ</a><br>
+        <a href="/dubai/#privacy">Privacy Policy</a>
       </div>
       <div>
         <h4>Contact Us</h4>
         <p>123 Clean Street, Dubai, UAE</p>
-        <p>+971559358440</p>
-        <p>kalamansari1996@gmail.com</p>
+        <p><a href="tel:+971559358440">+971559358440</a></p>
+        <p><a href="mailto:kalamansari1996@gmail.com">kalamansari1996@gmail.com</a></p>
       </div>
     </div>
     <div class="footer__bottom">
